@@ -1,0 +1,102 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 2rem 2rem;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text h1 span {
+    color: cyan;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    background: cyan;
+    color: #111;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.btnOutline {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid cyan;
+    color: cyan;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.btn:hover,
+.btnOutline:hover {
+    transform: scale(1.05);
+}
+
+.hero-image img {
+    width: 350px;
+    border-radius: 15px;
+}
+
+/* Social buttons - default desktop */
+.social-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: #111;
+    color: white;
+    border-radius: 50%;
+    font-size: 2rem;
+    transition: all 0.3s;
+}
+
+.social-buttons a:hover {
+    background: cyan;
+    color: #111;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 70%;
+        margin-top: 2rem;
+    }
+
+    .social-buttons {
+        justify-content: center;
+        gap: 1.2rem;
+        /* slightly smaller gap for mobile */
+    }
+}

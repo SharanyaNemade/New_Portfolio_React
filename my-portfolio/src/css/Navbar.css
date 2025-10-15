@@ -1,0 +1,69 @@
+/* Navbar default */
+.navbar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-sizing: border-box;
+
+}
+
+.logo {
+    color: cyan;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Section spacing to avoid overlap with fixed navbar */
+section {
+    scroll-margin-top: 70px;
+    /* height of navbar */
+    padding-top: 80px;
+    /* slightly more than navbar height */
+    padding-bottom: 2rem;
+    /* optional spacing */
+}
+
+/* Navbar links */
+.links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: cyan;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .links {
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 70px;
+        /* same as navbar height */
+        right: 0;
+        width: 100%;
+        display: none;
+        /* hidden by default */
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .links.active {
+        display: flex;
+        /* show menu when toggled */
+    }
+}

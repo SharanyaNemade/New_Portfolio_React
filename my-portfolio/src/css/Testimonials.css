@@ -1,0 +1,84 @@
+.testimonials {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: cyan;
+    position: relative;
+}
+
+.testimonials h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: cyan;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Glassmorphism card */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 255, 255, 0.4);
+}
+
+.card p {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.card h4 {
+    color: cyan;
+    font-weight: bold;
+    text-align: right;
+    font-size: 1rem;
+}
+
+/* Add futuristic dots or icons (optional) */
+.card::before {
+    content: "❝";
+    font-size: 3rem;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: rgba(0, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        padding: 1.8rem;
+    }
+}
